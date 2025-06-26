@@ -5,67 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio - Jad Elkadi</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#0f172a',
+              secondary: '#1e293b',
+              accent: '#38bdf8',
+            },
+          },
+        },
+      }
+    </script>
   </head>
-  <body class="bg-gray-100 text-gray-800 font-sans">
-    <!-- Header -->
-    <header class="bg-white shadow p-6">
-      <div class="max-w-5xl mx-auto">
-        <h1 class="text-3xl font-bold">Jad Elkadi</h1>
-        <p class="text-gray-600">Étudiant passionné par l'informatique, le développement logiciel et la cybersécurité</p>
+  <body class="bg-primary text-white font-sans transition-all">
+    <!-- Navbar -->
+    <nav class="bg-secondary shadow fixed top-0 w-full z-50">
+      <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+        <h1 class="text-xl font-bold text-accent">Jad Elkadi</h1>
+        <div class="space-x-6">
+          <a href="#about" class="hover:text-accent transition">À propos</a>
+          <a href="#projects" class="hover:text-accent transition">Projets</a>
+          <a href="#experience" class="hover:text-accent transition">Expérience</a>
+          <a href="#skills" class="hover:text-accent transition">Compétences</a>
+          <a href="#contact" class="hover:text-accent transition">Contact</a>
+        </div>
       </div>
-    </header>
+    </nav>
 
-    <!-- Section Présentation -->
-    <section class="py-10">
-      <div class="max-w-5xl mx-auto px-4">
-        <h2 class="text-2xl font-semibold mb-4">À propos de moi</h2>
-        <p>
-          Je suis un lycéen passionné par les technologies, le développement logiciel, les réseaux et la cybersécurité. Je cherche à développer mes compétences à travers des stages, des projets personnels et des formations en ligne. Mon objectif est d’intégrer une université de haut niveau dans le domaine de l’informatique.
+    <main class="pt-24 space-y-24">
+      <!-- À propos -->
+      <section id="about" class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-semibold mb-4 text-accent">À propos de moi</h2>
+        <p class="text-lg leading-relaxed">
+          Lycéen passionné par l'informatique, le développement logiciel et la cybersécurité. Je développe mes compétences à travers des stages, formations en ligne et projets personnels.
         </p>
-      </div>
-    </section>
+      </section>
 
-    <!-- Section Projets -->
-    <section class="bg-white py-10">
-      <div class="max-w-5xl mx-auto px-4">
-        <h2 class="text-2xl font-semibold mb-4">Projets</h2>
-        <p class="text-gray-600">Mes projets seront ajoutés prochainement ici.</p>
-      </div>
-    </section>
+      <!-- Projets -->
+      <section id="projects" class="bg-secondary py-16">
+        <div class="max-w-6xl mx-auto px-4">
+          <h2 class="text-3xl font-semibold mb-6 text-accent">Projets</h2>
+          <p class="text-gray-300">Des projets seront ajoutés prochainement ici.</p>
+        </div>
+      </section>
 
-    <!-- Section Expériences -->
-    <section class="py-10">
-      <div class="max-w-5xl mx-auto px-4">
-        <h2 class="text-2xl font-semibold mb-4">Stages & Formations</h2>
-        <ul class="list-disc list-inside">
-          <li>Stage chez Agora Technologie (Juillet 2024) : Configuration Active Directory & Réseaux</li>
-          <li>Formation en ligne en cours : Programmation / Développement Web</li>
+      <!-- Expérience -->
+      <section id="experience" class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-semibold mb-6 text-accent">Expériences</h2>
+        <ul class="space-y-2 text-lg">
+          <li>🛠️ Stage chez Agora Technologie (Juillet 2024) : Active Directory & Réseaux</li>
+          <li>📚 Formation en ligne en cours : Programmation, Développement Web</li>
         </ul>
-      </div>
-    </section>
+      </section>
 
-    <!-- Section Compétences -->
-    <section class="bg-white py-10">
-      <div class="max-w-5xl mx-auto px-4">
-        <h2 class="text-2xl font-semibold mb-4">Compétences</h2>
-        <ul class="list-disc list-inside">
-          <li>Langages : Python (débutant), HTML/CSS (en apprentissage)</li>
-          <li>Outils : Word, Excel, PowerPoint</li>
-          <li>Réseaux : Active Directory, notions en infrastructure</li>
-        </ul>
-      </div>
-    </section>
+      <!-- Compétences -->
+      <section id="skills" class="bg-secondary py-16">
+        <div class="max-w-6xl mx-auto px-4">
+          <h2 class="text-3xl font-semibold mb-6 text-accent">Compétences</h2>
+          <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-lg text-gray-300">
+            <li>Langages : Python (débutant), HTML/CSS</li>
+            <li>Outils : Word, Excel, PowerPoint</li>
+            <li>Réseaux : Active Directory, notions en infrastructure</li>
+          </ul>
+        </div>
+      </section>
 
-    <!-- Contact -->
-    <section class="py-10">
-      <div class="max-w-5xl mx-auto px-4 text-center">
-        <h2 class="text-2xl font-semibold mb-4">Contact</h2>
-        <p>Tu peux me contacter par mail : <a href="mailto:elkadijad84@gmail.com" class="text-blue-500 underline">elkadijad84@gmail.com</a></p>
-      </div>
-    </section>
+      <!-- Contact -->
+      <section id="contact" class="max-w-6xl mx-auto px-4 text-center">
+        <h2 class="text-3xl font-semibold mb-4 text-accent">Contact</h2>
+        <p class="text-lg">Tu peux me contacter par mail : <a href="mailto:elkadijad84@gmail.com" class="text-accent underline hover:text-white transition">elkadijad84@gmail.com</a></p>
+      </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-200 py-4 text-center text-sm text-gray-600">
+    <footer class="bg-secondary py-6 text-center text-sm text-gray-400 mt-24">
       © 2025 Jad Elkadi. Tous droits réservés.
     </footer>
   </body>
